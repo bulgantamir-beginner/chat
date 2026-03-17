@@ -60,7 +60,7 @@ usernameInput.addEventListener(
 );
 
 function sendMessage() {
-  const text = msgInput.ariaValueMax.trim();
+  const text = msgInput.value.trim();
   if (!text) return;
   socket.emit("chat:message", text);
   msgInput.value = "";
