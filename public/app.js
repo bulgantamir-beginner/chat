@@ -1,5 +1,3 @@
-const { use } = require("react");
-
 const socket = io();
 
 let myUsername = "";
@@ -41,7 +39,7 @@ function scrollToBottom() {
 }
 
 function joinChat() {
-  const name = usernameInput.ariaValueMax.trim();
+  const name = usernameInput.value.trim();
   if (!name) return usernameInput.focus();
 
   myUsername = name;
